@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand me-2" href="index.html">
+          <img
+            src="images/onlineshopping.png"
+            height="100"
+            alt=""
+            loading="lazy"
+            style="margin-top: -1px"
+          />
+        </a>
+
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarButtonsExample"
+          aria-controls="navbarButtonsExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Shop</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+
+          <div class="d-flex align-items-center">
+            <a
+              href="index.html"
+              type="button"
+              class="btn btn-link px-3 me-2"
+              >Home</a
+            >
+            <a
+              href="dashboard.html"
+              type="button"
+              class="btn btn-link px-3 me-2"
+              >Add Product</a
+            >
+            <a
+              href="dashboard.html"
+              type="button"
+              class="btn btn-color text-light me-3"
+            >
+              Admin dashboard
+            </a>
+            <a
+              class="px-3"
+              href="checkout.html"
+              role="button"
+              ><i class="fas fa-cart-plus fs-2 text-dark"></i
+            ></a>
+          </div>
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+
+    <!-- Navbar -->
+
+    <!-- main content -->
+
+    <div class="container">
+
+      <form method="post" class="spaceform" >
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form1Example1" class="form-control" name="productName"/>
+          <label class="form-label" for="form1Example1">Title</label>
+        </div>
+        
+        <!-- Product description -->
+        <div class="form-outline mb-4">
+          <textarea class="form-control" id="form4Example3" rows="4" name="productDescription"></textarea>
+          <label class="form-label" for="form4Example3">Product Description</label>
+        </div>
+        
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form1Example1" class="form-control" name="size"/>
+          <label class="form-label" for="form1Example1">Size</label>
+        </div>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form1Example1" class="form-control" name="quantity"/>
+          <label class="form-label" for="form1Example1">Quantity</label>
+        </div>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form1Example1" class="form-control" name="images"/>
+          <label class="form-label" for="form1Example1">Image URL</label>
+        </div>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="form1Example1" class="form-control" name="price"/>
+          <label class="form-label" for="form1Example1"></label>
+        </div>
+      
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block">Create Product</button>
+      </form>
+
+    </div>
+
+    <!-- end main content -->
+
+    <!-- footer -->
+    <footer class="text-center text-white spacefoot">
+      <!-- Grid container -->
+      <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <!-- Twitter -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <!-- Google -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <!-- Github -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-light m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center text-light p-3 copprt">
+        © 2021 Copyright:
+        <a class="text-light" href="https://mdbootstrap.com/">Emperor Hassy</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+    ></script>
+  </body>
+</html>

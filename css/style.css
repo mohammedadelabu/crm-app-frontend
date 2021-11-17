@@ -1,0 +1,21 @@
+.space{
+    margin-top: 30px;
+}
+.spacefoot{
+    margin-top: 50px;
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+
+.copprt{
+    background-color: black;
+    color: white;
+}
+.btn-color{
+    background-color: rgb(55, 25, 91);
+}
+.spaceform{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 30px;
+}
