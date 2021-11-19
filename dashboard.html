@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>dashboard</title>
     <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -22,6 +22,9 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
   </head>
   <body>
     <!-- Navbar -->
@@ -31,7 +34,7 @@
         <!-- Navbar brand -->
         <a class="navbar-brand me-2" href="index.html">
           <img
-            src="images/onlineshopping.png"
+            src="images/emperor.png"
             height="100"
             alt=""
             loading="lazy"
@@ -57,7 +60,7 @@
           <!-- Left links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Shop</a>
+              <a class="nav-link" href="index.html"><b>Emperor's Crib</b></a>
             </li>
           </ul>
           <!-- Left links -->
@@ -72,7 +75,7 @@
             <a
               href="dashboard.html"
               type="button"
-              class="btn btn-link px-3 me-2"
+              class="btn btn-link px-3 me-2 "
               >Add Product</a
             >
             <a
@@ -98,51 +101,273 @@
     <!-- Navbar -->
 
     <!-- main content -->
+    <br>
+    <br>
+    <br>
 
     <div class="container">
+      <div id="accordion">
 
-      <form method="post" class="spaceform" >
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="text" id="form1Example1" class="form-control" name="productName"/>
-          <label class="form-label" for="form1Example1">Title</label>
+        <div class="card">
+          <div class="card-header">
+            <a class="btn btn-color text-light" data-bs-toggle="collapse" href="#collapseOne">
+              Add Products
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body">
+              <div class="container">
+                <div class=" text-center mt-5 ">
+                  <h1>Input Your product Details </h1>
+                </div>
+                <div class="row ">
+                  <div class="col-lg-7 mx-auto">
+                    <div class="card mt-2 mx-auto p-4 bg-light">
+                      <div class="card-body bg-light">
+                        <div class="container">
+                          <form id="add-product-form" method="post" role="form">
+                            <div class="controls">
+                              <div class="row">
+                                <div class="col-6">
+                                  <div class="form-group"> <label>Product Name</label> <input type="text"
+                                      name="productName" class="form-control"
+                                      placeholder="Please enter your product Name" required="required"
+                                      data-error="productName is required."> </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group"> <label>Product quantity </label> <input type="text"
+                                      name="quantity" class="form-control"
+                                      placeholder="Please enter the quantity of the product" required="required"
+                                      data-error="quantity is required."> </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group"> <label>Product image</label> <input type="text" name="images"
+                                      class="form-control" placeholder="Please enter your product image link"
+                                      required="required" data-error="image urls required."> </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group"> <label>Product color </label> <input type="text" name="color"
+                                      class="form-control" placeholder="Please enter the color of the product"
+                                      required="required" data-error="color is required."> </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group"> <label> Product price</label> <input type="text" name="price"
+                                      class="form-control" placeholder="Please enter the price of the product"
+                                      required="required" data-error="price is required."> </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group"> <label> Product size</label> <input type="text" name="size"
+                                      class="form-control" placeholder="Please enter the size of the product"
+                                      required="required" data-error="size is required."> </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="form-group"> <label> Product description</label> <input type="text"
+                                      name="productDescription" class="form-control"
+                                      placeholder="Please enter the description of the product" required="required"
+                                      data-error="description is required."> </div>
+                                </div>
+                              </div>
+                              <div class="col-md-12 post"> <input type="submit"
+                                  class="btn btn-danger btn-send  pt-2 btn-block " value="Add new product"> </div>
+                            </div>
+                          </form>
+                        </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div> <!-- /.8 -->
+                </div> <!-- /.row-->
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <!-- Product description -->
-        <div class="form-outline mb-4">
-          <textarea class="form-control" id="form4Example3" rows="4" name="productDescription"></textarea>
-          <label class="form-label" for="form4Example3">Product Description</label>
-        </div>
-        
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="text" id="form1Example1" class="form-control" name="size"/>
-          <label class="form-label" for="form1Example1">Size</label>
-        </div>
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="text" id="form1Example1" class="form-control" name="quantity"/>
-          <label class="form-label" for="form1Example1">Quantity</label>
-        </div>
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="text" id="form1Example1" class="form-control" name="images"/>
-          <label class="form-label" for="form1Example1">Image URL</label>
-        </div>
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="text" id="form1Example1" class="form-control" name="price"/>
-          <label class="form-label" for="form1Example1"></label>
-        </div>
-      
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block">Create Product</button>
-      </form>
+      </div>
 
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn btn-color text-light" data-bs-toggle="collapse" href="#collapseTwo">
+            Update Product
+          </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            <div class="container">
+              <div class=" text-center mt-5 ">
+                <h1>Update your product Details </h1>
+              </div>
+              <div class="row ">
+                <div class="col-lg-7 mx-auto">
+                  <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light">
+                      <div class="container">
+                        <form id="update-product-form" method="post"  role="form">
+                          <div class="controls">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group"> <label>Product Id</label> <input type="text"
+                                    name="productId" class="form-control" placeholder="Please enter your product Id number"
+                                    required="required" data-error="ProductId is required."> </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group"> <label for="form_lastname">Product Name </label> <input
+                                     type="text" name="ProductName" class="form-control"
+                                    placeholder="Please enter the name of your product" required="required"
+                                    data-error="ProductName is required."> </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group"> <label for="form_name">Product image</label> <input type="text"
+                                    name="images" class="form-control" placeholder="Please enter your product image link"
+                                    required="required" data-error="image is required."> </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group"> <label for="form_lastname">Product color </label> <input
+                                    id="form_lastname" type="text" name="color" class="form-control"
+                                    placeholder="Please enter the color of the product" required="required"
+                                    data-error="Lastname is required."> </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group"> <label for="form_price"> Product price</label> <input
+                                    id="form_price" type="text" name="price" class="form-control"
+                                    placeholder="Please enter the price of the product" required="required"
+                                    data-error="Valid email is required."> </div>
+                              </div>
+                                <div class="col-md-6">
+                                  <div class="form-group"> <label> Product size</label> <input type="text" name="size"
+                                      class="form-control" placeholder="Please enter the size of the product"
+                                      required="required" data-error="size is required.">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group"> <label>Product Description</label>
+                                  <input type="text" name="productDescription" class="form-control"
+                                    placeholder="Please enter the description of the product" required="required"
+                                    data-error="description is required"> </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group"> <label> Product Quantity</label> <input type="text" name="quantity"
+                                    class="form-control" placeholder="Please enter the size of the product"
+                                    required="required" data-error="size is required.">
+                              </div>
+                            </div>
+                              <div class="col-md-12 post"> <input type="submit"
+                                  class="btn btn-primary btn-send pt-2 btn-block " value="Update Products"> </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div> <!-- /.8 -->
+                </div> <!-- /.row-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn text-light btn-color" data-bs-toggle="collapse" href="#collapseThree">
+            Display Product
+          </a>
+        </div>
+        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            <div class="container">
+              <div class=" text-center mt-5 ">
+                <h1>Display product Details </h1>
+              </div>
+              <div class="row ">
+                <div class="col-lg-7 mx-auto">
+                  <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light">
+                      <div class="container">
+                        <form id="retrieve-product-form" role="form">
+                          <div class="controls">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group"> <label for="form_name">Find product</label> <input type="text"
+                                    name="name" class="form-control" placeholder="Please enter your product Id"
+                                    required="required" data-error="Firstname is required."> </div>
+                              </div>
+                              <div class="col-md-12 post"> <input type="submit"
+                                  class="btn btn-danger btn-send pt-2 btn-block " value="get Products"> </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div> <!-- /.8 -->
+                </div> <!-- /.row-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed btn btn-color text-light" data-bs-toggle="collapse" href="#collapseFour">
+            Delete Product
+          </a>
+        </div>
+        <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+          <div class="card-body">
+            <div class="container">
+              <div class=" text-center mt-5 ">
+                <h1>Delete  Uwanted Products  </h1>
+              </div>
+              <div class="row ">
+                <div class="col-lg-7 mx-auto">
+                  <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light">
+                      <div class="container">
+                        <form id="delete-product-form" role="form">
+                          <div class="controls">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="form-group"> <label> Product description</label> <input type="text"
+                                    name="productId" class="form-control"
+                                    placeholder="Please enter Id of the product you wish to delete" required="required"
+                                    data-error="productId is required."> </div>
+                              </div>
+                            </div>
+                            <div class="col-md-12 post"> <input type="submit"
+                                class="btn btn-success btn-send  pt-2 btn-block " value="Delete product"> </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div> <!-- /.8 -->
+                </div> <!-- /.row-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <script src="resources/admin.js"> </script>
     </div>
 
     <!-- end main content -->
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- footer -->
     <footer class="text-center text-white spacefoot">
       <!-- Grid container -->
@@ -208,7 +433,7 @@
 
       <!-- Copyright -->
       <div class="text-center text-light p-3 copprt">
-        © 2021 Copyright:
+        © 2021 Copyright: Emperor Hassy
         <a class="text-light" href="https://mdbootstrap.com/">Emperor Hassy</a>
       </div>
       <!-- Copyright -->
@@ -219,5 +444,6 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
     ></script>
+    <script src="resources/admin.js"></script>
   </body>
 </html>
