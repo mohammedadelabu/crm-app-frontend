@@ -72,25 +72,25 @@
               class="btn btn-link px-3 me-2"
               >Home</a
             >
-            <a
+            <!-- <a
               href="dashboard.html"
               type="button"
               class="btn btn-link px-3 me-2 "
               >Add Product</a
-            >
+            > -->
             <a
               href="dashboard.html"
               type="button"
               class="btn btn-color text-light me-3"
             >
-              Admin dashboard
+              User dashboard
             </a>
-            <a
+            <!-- <a
               class="px-3"
               href="checkout.html"
               role="button"
               ><i class="fas fa-cart-plus fs-2 text-dark"></i
-            ></a>
+            ></a> -->
           </div>
         </div>
         <!-- Collapsible wrapper -->
@@ -108,73 +108,73 @@
     <div class="container">
       <div id="accordion">
 
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-header">
             <a class="btn btn-color text-light" data-bs-toggle="collapse" href="#collapseOne">
               Add Products
             </a>
-          </div>
+          </div> -->
           <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
             <div class="card-body">
               <div class="container">
                 <div class=" text-center mt-5 ">
-                  <h1>Input Your product Details </h1>
+                  <h1>Input Customer Details </h1>
                 </div>
                 <div class="row ">
                   <div class="col-lg-7 mx-auto">
                     <div class="card mt-2 mx-auto p-4 bg-light">
                       <div class="card-body bg-light">
                         <div class="container">
-                          <form id="add-product-form" method="post" role="form">
+                          <form id="add-customer-form" method="post" role="form">
                             <div class="controls">
                               <div class="row">
                                 <div class="col-6">
-                                  <div class="form-group"> <label>Product Name</label> <input type="text"
-                                      name="productName" class="form-control"
-                                      placeholder="Please enter your product Name" required="required"
-                                      data-error="productName is required."> </div>
+                                  <div class="form-group"> <label>Fullname</label> <input type="text"
+                                      name="fullname" class="form-control"
+                                      placeholder="Please enter your Fullname" required="required"
+                                      data-error="fullname is required."> </div>
                                 </div>
                                 <div class="col-md-6">
-                                  <div class="form-group"> <label>Product quantity </label> <input type="text"
-                                      name="quantity" class="form-control"
-                                      placeholder="Please enter the quantity of the product" required="required"
-                                      data-error="quantity is required."> </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <div class="form-group"> <label>Product image</label> <input type="text" name="images"
-                                      class="form-control" placeholder="Please enter your product image link"
-                                      required="required" data-error="image urls required."> </div>
-                                </div>
-                                <div class="col-md-6">
-                                  <div class="form-group"> <label>Product color </label> <input type="text" name="color"
-                                      class="form-control" placeholder="Please enter the color of the product"
-                                      required="required" data-error="color is required."> </div>
+                                  <div class="form-group"> <label>Email </label> <input type="text"
+                                      name="email" class="form-control"
+                                      placeholder="Please enter your email" required="required"
+                                      data-error="email is required."> </div>
                                 </div>
                               </div>
                               <div class="row">
                                 <div class="col-md-6">
-                                  <div class="form-group"> <label> Product price</label> <input type="text" name="price"
-                                      class="form-control" placeholder="Please enter the price of the product"
+                                  <div class="form-group"> <label>Customer Gender</label> <input type="text" name="gender"
+                                      class="form-control" placeholder="Please enter your Gender"
+                                      required="required" data-error="gender required."> </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group"> <label>Phone Number </label> <input type="text" name="phone"
+                                      class="form-control" placeholder="Please enter your phone number"
+                                      required="required" data-error="Phone number is required."> </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group"> <label> Customer Address</label> <input type="text" name="address"
+                                      class="form-control" placeholder="Please enter your address"
                                       required="required" data-error="price is required."> </div>
                                 </div>
                                 <div class="col-md-6">
-                                  <div class="form-group"> <label> Product size</label> <input type="text" name="size"
-                                      class="form-control" placeholder="Please enter the size of the product"
-                                      required="required" data-error="size is required."> </div>
+                                  <div class="form-group"> <label> Customer Notes</label> <input type="text" name="notes"
+                                      class="form-control" placeholder="Please enter any additional info"> </div>
                                 </div>
                               </div>
-                              <div class="row">
+                              <!-- <div class="row">
                                 <div class="col-md-12">
                                   <div class="form-group"> <label> Product description</label> <input type="text"
                                       name="productDescription" class="form-control"
                                       placeholder="Please enter the description of the product" required="required"
                                       data-error="description is required."> </div>
                                 </div>
-                              </div>
+                              </div> -->
+                              <br>
                               <div class="col-md-12 post"> <input type="submit"
-                                  class="btn btn-danger btn-send  pt-2 btn-block " value="Add new product"> </div>
+                                  class="btn btn-danger btn-send  pt-2 btn-block " value="Add new Customer"> </div>
                             </div>
                           </form>
                         </div>
@@ -192,77 +192,78 @@
       <div class="card">
         <div class="card-header">
           <a class="collapsed btn btn-color text-light" data-bs-toggle="collapse" href="#collapseTwo">
-            Update Product
+            Update Customer
           </a>
         </div>
         <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
           <div class="card-body">
             <div class="container">
               <div class=" text-center mt-5 ">
-                <h1>Update your product Details </h1>
+                <h1>Update your Customer Details </h1>
               </div>
               <div class="row ">
                 <div class="col-lg-7 mx-auto">
                   <div class="card mt-2 mx-auto p-4 bg-light">
                     <div class="card-body bg-light">
                       <div class="container">
-                        <form id="update-product-form" method="post"  role="form">
+                        <form id="update-customer-form" method="post"  role="form">
                           <div class="controls">
                             <div class="row">
                               <div class="col-md-6">
-                                <div class="form-group"> <label>Product Id</label> <input type="text"
-                                    name="productId" class="form-control" placeholder="Please enter your product Id number"
-                                    required="required" data-error="ProductId is required."> </div>
+                                <div class="form-group"> <label>Customer Id</label> <input type="text"
+                                    name="id" class="form-control" placeholder="Please enter your Customer Id number"
+                                    required="required" data-error="CustomerId is required."> </div>
                               </div>
                               <div class="col-md-6">
-                                <div class="form-group"> <label for="form_lastname">Product Name </label> <input
-                                     type="text" name="ProductName" class="form-control"
-                                    placeholder="Please enter the name of your product" required="required"
-                                    data-error="ProductName is required."> </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <div class="form-group"> <label for="form_name">Product image</label> <input type="text"
-                                    name="images" class="form-control" placeholder="Please enter your product image link"
-                                    required="required" data-error="image is required."> </div>
-                              </div>
-                              <div class="col-md-6">
-                                <div class="form-group"> <label for="form_lastname">Product color </label> <input
-                                    id="form_lastname" type="text" name="color" class="form-control"
-                                    placeholder="Please enter the color of the product" required="required"
-                                    data-error="Lastname is required."> </div>
+                                <div class="form-group"> <label for="form_lastname">Customer Fullname </label> <input
+                                     type="text" name="fullname" class="form-control"
+                                    placeholder="Please enter the fullname of your Customer" required="required"
+                                    data-error="CustomerName is required."> </div>
                               </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <div class="form-group"> <label for="form_price"> Product price</label> <input
-                                    id="form_price" type="text" name="price" class="form-control"
-                                    placeholder="Please enter the price of the product" required="required"
-                                    data-error="Valid email is required."> </div>
+                                <div class="form-group"> <label for="form_name">Customer email</label> <input type="text"
+                                    name="email" class="form-control" placeholder="Please enter your email"
+                                    required="required" data-error="email is required."> </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group"> <label for="form_gender">Customer gender </label> <input
+                                    id="form_gender" type="text" name="gender" class="form-control"
+                                    placeholder="Please enter the gender of the Customer" required="required"
+                                    data-error="Gender is required."> </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group"> <label for="form_address"> Customer address</label> <input
+                                    id="form_address" type="text" name="address" class="form-control"
+                                    placeholder="Please enter the address of the Customer" required="required"
+                                    data-error="address is required."> </div>
                               </div>
                                 <div class="col-md-6">
-                                  <div class="form-group"> <label> Product size</label> <input type="text" name="size"
-                                      class="form-control" placeholder="Please enter the size of the product"
-                                      required="required" data-error="size is required.">
+                                  <div class="form-group"> <label> Customer notes</label> <input type="text" name="notes"
+                                      class="form-control" placeholder="Please enter notes for the Customer"
+                                      >
                                 </div>
                               </div>
                             </div>
-                            <div class="row">
+                            <!-- <div class="row">
                               <div class="col-md-6">
-                                <div class="form-group"> <label>Product Description</label>
-                                  <input type="text" name="productDescription" class="form-control"
-                                    placeholder="Please enter the description of the product" required="required"
+                                <div class="form-group"> <label>Customer Description</label>
+                                  <input type="text" name="customerDescription" class="form-control"
+                                    placeholder="Please enter the description of the customer" required="required"
                                     data-error="description is required"> </div>
-                              </div>
-                              <div class="col-md-6">
-                                <div class="form-group"> <label> Product Quantity</label> <input type="text" name="quantity"
-                                    class="form-control" placeholder="Please enter the size of the product"
-                                    required="required" data-error="size is required.">
+                              </div> -->
+                              <div class="col-md-12">
+                                <div class="form-group"> <label> Customer Phone</label> <input type="text" name="phone"
+                                    class="form-control" placeholder="Please enter the Customer Phone Number"
+                                    required="required" data-error="phone is required.">
                               </div>
                             </div>
+                            <br>
                               <div class="col-md-12 post"> <input type="submit"
-                                  class="btn btn-primary btn-send pt-2 btn-block " value="Update Products"> </div>
+                                  class="btn btn-primary btn-send pt-2 btn-block " value="Update Customer"> </div>
                             </div>
                           </div>
                         </form>
@@ -279,30 +280,31 @@
       <div class="card">
         <div class="card-header">
           <a class="collapsed btn text-light btn-color" data-bs-toggle="collapse" href="#collapseThree">
-            Display Product
+            Display Customer
           </a>
         </div>
         <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
           <div class="card-body">
             <div class="container">
               <div class=" text-center mt-5 ">
-                <h1>Display product Details </h1>
+                <h1>Display Customer Details </h1>
               </div>
               <div class="row ">
                 <div class="col-lg-7 mx-auto">
                   <div class="card mt-2 mx-auto p-4 bg-light">
                     <div class="card-body bg-light">
                       <div class="container">
-                        <form id="retrieve-product-form" role="form">
+                        <form id="retrieve-customer-form" role="form">
                           <div class="controls">
                             <div class="row">
                               <div class="col-md-6">
-                                <div class="form-group"> <label for="form_name">Find product</label> <input type="text"
-                                    name="name" class="form-control" placeholder="Please enter your product Id"
-                                    required="required" data-error="Firstname is required."> </div>
+                                <div class="form-group"> <label for="form_name">Find Customer</label> <input type="text"
+                                    name="fullname" class="form-control" placeholder="Please enter your Customer Id"
+                                    required="required" data-error="Firstname is required."> </div><br>
                               </div>
+                              <br>
                               <div class="col-md-12 post"> <input type="submit"
-                                  class="btn btn-danger btn-send pt-2 btn-block " value="get Products"> </div>
+                                  class="btn btn-danger btn-send pt-2 btn-block " value="get Customer"> </div>
                             </div>
                           </div>
                         </form>
@@ -319,32 +321,33 @@
       <div class="card">
         <div class="card-header">
           <a class="collapsed btn btn-color text-light" data-bs-toggle="collapse" href="#collapseFour">
-            Delete Product
+            Delete Customer
           </a>
         </div>
         <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
           <div class="card-body">
             <div class="container">
               <div class=" text-center mt-5 ">
-                <h1>Delete  Uwanted Products  </h1>
+                <h1>Delete  Uwanted Customers  </h1>
               </div>
               <div class="row ">
                 <div class="col-lg-7 mx-auto">
                   <div class="card mt-2 mx-auto p-4 bg-light">
                     <div class="card-body bg-light">
                       <div class="container">
-                        <form id="delete-product-form" role="form">
+                        <form id="delete-customer-form" role="form">
                           <div class="controls">
                             <div class="row">
                               <div class="col-md-12">
-                                <div class="form-group"> <label> Product description</label> <input type="text"
-                                    name="productId" class="form-control"
-                                    placeholder="Please enter Id of the product you wish to delete" required="required"
-                                    data-error="productId is required."> </div>
+                                <div class="form-group"> <label> Customer description</label> <input type="text"
+                                    name="id" class="form-control"
+                                    placeholder="Please enter Id of the Customer you wish to delete" required="required"
+                                    data-error="customerId is required."> </div>
                               </div>
                             </div>
+                            <br>
                             <div class="col-md-12 post"> <input type="submit"
-                                class="btn btn-success btn-send  pt-2 btn-block " value="Delete product"> </div>
+                                class="btn btn-success btn-send  pt-2 btn-block " value="Delete Customer"> </div>
                           </div>
                         </form>
                       </div>
@@ -357,7 +360,7 @@
         </div>
 
       </div>
-      <script src="resources/admin.js"> </script>
+      <!-- <script src="resources/admin.js"> </script> -->
     </div>
 
     <!-- end main content -->
