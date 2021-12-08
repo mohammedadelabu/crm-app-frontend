@@ -42,68 +42,86 @@ if (ready) {
         window.alert("Customer added successfully");
         window.location.href = "index.html";
       } else {
-        window.alert(error);
+        window.alert(res.response);
       }
     });
+  
 
     // UPDATE CUSTOMERS
+    async function callApi(objectId, method, body) {
+      if (method === "PUT") {
+        const response = await fetch(
+          `https://fast-everglades-78238.herokuapp.com/users/customer/${objectId}`
+        );
+        return await response.json();
+      } else {
+        // const formElement = document.getElementById("add-customer-form");
+        const response = await fetch(
+          `https://fast-everglades-78238.herokuapp.com/users/customer${objectId}`,
+          {
+            method: method,
+            body: JSON.stringify(body),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        return await response.json();
+      }
+    }
+    
+    
     document
     .querySelector("#update-customer-form")
     .addEventListener("submit", async (e) => {
       e.preventDefault();
-      const formElement = document.getElementById("update-customer-form");
-      const formData = new FormData(formElement);
-    
-      const customer = {};
-      for (let key of formData.keys()) {
-        const item = formData.find((elem) => elem.id === id)
-
-          if(item) customer[key] = formData.append(key, updateCustomer(item));
-      }
-
-      const res = await callApi("", "PUT", customer);
-      console.log(res);
-      if (res["status"] === "success") {
-        window.alert("Customer updated successfully");
-        window.location.reload();
-        // window.location.href = "index.html";
-      } else {
-        window.alert(error);
-      }
+      alert("HI")
+      // const formElement = document.getElementById("update-customer-form");
+      // const formData = new FormData(formElement);
+      
+      // const customer = {};
+      // for (let key of formData.keys()) {
+      //   customer[key] = formData.get(key);
+      // }
+      
+      // const res = await callApi("", "PUT", customer);
+      // console.log(res);
+      // if (res["status"] === "success") {
+      //   window.alert("Customer added successfully");
+      //   window.location.href = "index.html";
+      // } else {
+      //   window.alert(res.response);
+      // }
     });
-
-    function updateCustomer (user, updatedCustomer) {
-        user.Fullname = updatedCustomer.Fullname ? updatedCustomer.Fullname : user.Fullname;
-        user.Email = updatedCustomer.Email ? updatedCustomer.Email : user.Email;
-        user.Gender = updatedCustomer.Gender ? updatedCustomer.Gender : user.Gender;
-        user.Phone = updatedCustomer.Phone ? updatedCustomer.Phone : user.Phone;
-        user.Address = updatedCustomer.Address ? updatedCustomer.Address : user.Address;
-        user.Notes = updatedCustomer.Notes ? updatedCustomer.Notes : user.Notes;
-        user.Publisher = updatedCustomer.Publisher ? updatedCustomer.Publisher : user.Publisher;
-        return user
-      } 
-
-// DELETE CUSTOMERS
-document
-.querySelector("#delete-customer-form")
-.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const formElement = document.getElementById("delete-customer-form");
-  const formData = new FormData(formElement);
-
-  const customer = {};
-  for (let key of formData.keys()) {
-    customer[key] = formData.delete(key);
+  }
+    
+    // DELETE CUSTOMERS
+    async function deleteCustomer(id){
+  console.log('fdfdfdfd',id);
+    let response=await fetch(
+      `https://fast-everglades-78238.herokuapp.com/users/customer/${id}`, 
+    {
+      method: 'DELETE'
+    }
+    );
+    
+    let result= await response.json()
+    console.log(result);
+    alert(result.data)
+    location.reload()
   }
 
-  const res = await callApi("", "DELETE", customer);
-  console.log(res);
-  if (res["status"] === "success") {
-    window.alert("Customer deleted successfully");
-    window.location.href = "index.html";
-  } else {
-    window.alert(error);
-  }
-});
 
-}
+// async function updateCustomer(objectId){
+//     let response=await fetch(
+//       `https://fast-everglades-78238.herokuapp.com/users/customer/${objectId}`, 
+//     {
+//       method: 'PUT'
+//     }
+//     );
+    
+//     let result= await response.json()
+//     console.log(result);
+//     alert(result.data)
+//     location.reload()
+//   }
